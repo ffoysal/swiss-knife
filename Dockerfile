@@ -6,3 +6,4 @@ RUN apk update && \
 RUN apk add --no-cache wget && \
     wget https://github.com/mikefarah/yq/releases/download/v4.6.3/yq_linux_amd64 -O /usr/bin/yq && \
     chmod +x /usr/bin/yq
+COPY --from=fortio/fortio /usr/bin/fortio /usr/bin/fortio
